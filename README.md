@@ -1,4 +1,3 @@
-      
 # EPG System - Guia de Programação
 
 Este projeto fornece guias de programação de canais para dispositivos compatíveis com o **Enigma2**. Ele inclui arquivos com informações sobre a programação e IDs dos canais, além de scripts para instalação de plugins.
@@ -25,8 +24,8 @@ Este projeto fornece guias de programação de canais para dispositivos compatí
   <channel id="ESPN5">
     <channel-id>12345</channel-id>
   </channel>
-
-    Como usar o guide.xml
+  
+  Como usar o guide.xml
 
 O arquivo guide.xml é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
 1. Transferindo o Arquivo para o Dispositivo
@@ -116,9 +115,7 @@ Exemplo de Arquivo guide.xml
 <programme start="20240323080000 +0000" stop="20240323090000 +0000" channel="ESPN5">
     <title>Jogo ao Vivo</title>
     <desc>Transmissão do jogo ao vivo.</desc>
-</programme>
-
-    Imagens
+</programme>Imagens
 
 Substitua a imagem abaixo pelo conteúdo real que mostra a interface do guia de programação no dispositivo Enigma2.
 
@@ -127,6 +124,9 @@ Substitua a imagem abaixo pelo conteúdo real que mostra a interface do guia de 
 Contribuições
 
 Contribuições são bem-vindas! Para enviar melhorias ou relatar problemas, abra uma issue ou pull request no repositório [link do repositório aqui]. Se precisar de suporte, entre em contato pelo [link do fórum ou suporte aqui].
+
+    
+
 
 
 
