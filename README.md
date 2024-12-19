@@ -1,5 +1,3 @@
-Aqui está um novo README.md com as sugestões incorporadas:
-
 ---
 
 # EPG System - Guia de Programação
@@ -26,6 +24,7 @@ O sistema EPG (Electronic Program Guide) é uma ferramenta essencial para dispos
 
 ### 1. `guide.xml.gz`
 - Contém a programação completa dos canais.  
+- **É necessário descompactar este arquivo antes de usá-lo.** O arquivo descompactado será o `guide.xml`.
 - As IDs no `guide.xml.gz` devem coincidir com as do `channels ids.xml`.
 
 ### 2. `channel id.xml`
@@ -41,12 +40,13 @@ O sistema EPG (Electronic Program Guide) é uma ferramenta essencial para dispos
 O arquivo `guide.xml` é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
 
 ### 1. Transferindo o Arquivo para o Dispositivo
-- No plugin Powerlame, escolha a opção **Baixar source para EPGimport**.
+- No plugin Powerlame, escolha a opção **"Baixar source para EPGimport"**.
+- O Powerlame irá baixar o arquivo `guide.xml.gz` e descompactá-lo no local correto para o EPG Importer.
 
 ### 2. Configurando o EPG Importer
 - No menu do dispositivo, acesse **Configurações > Plugins > EPG Importer**.
 - Dentro do EPG Importer:
-  - Verifique se o local do arquivo `guide.xml` está configurado corretamente.
+  - Verifique se o local do arquivo `guide.xml` está configurado corretamente. O local padrão é `/etc/enigma2/`.
   - Ative a opção para importar o guia automaticamente ou manualmente.
 
 ### 3. Executando a Importação
@@ -153,15 +153,16 @@ Certifique-se de seguir as diretrizes de estilo e padrões de codificação do p
 ---
 
 [![Build Status](https://img.shields.io/travis/systemof/EPG.svg)](https://travis-ci.org/systemof/EPG)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 
 ---
 
 ## Licença
-
-Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+Livre
 
 ---
+
+
 
 
 
