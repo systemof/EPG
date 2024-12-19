@@ -1,3 +1,4 @@
+
 # EPG System - Guia de Programação
 
 Este projeto fornece guias de programação de canais para dispositivos compatíveis com o **Enigma2**. Ele inclui arquivos com informações sobre a programação e IDs dos canais, além de scripts para instalação de plugins.
@@ -15,41 +16,29 @@ Este projeto fornece guias de programação de canais para dispositivos compatí
 ## Arquivos Importantes
 
 ### 1. `guide.xml.gz`
--** Contém a programação completa dos canais em formato XML comprimido.
--** **É necessário descompactar este arquivo antes de usá-lo.** O arquivo descompactado será o `guide.xml`
--** As IDs no `guide.xml` devem coincidir com as do `channels ids.xml` para que a programação seja exibida corretamente.
+- Contém a programação completa dos canais.  
+- As IDs no `guide.xml.gz` devem coincidir com as do `channels ids.xml`.
   
 ## Como usar o Guide.xml
 
--** O arquivo `guide.xml` é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
+O arquivo `guide.xml` é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
 
-### Transferindo o Arquivo para o Dispositivo
-
-1. Transferindo o Arquivo para o Dispositivo
-
--** No plugin Powerlame, escolha a opção "Baixar source para EPGimport". O Powerlame irá baixar o arquivo guide.xml.gz e descompactá-lo no local correto para o EPG Importer.
+### 1. Transferindo o Arquivo para o Dispositivo
+- No plugin Powerlame escolha a opção Baixar source para EPGimport
 
 ### 2. Configurando o EPG Importer
-
--** No menu do dispositivo, acesse Configurações > Plugins > EPG Importer.
-
--** Dentro do EPG Importer:
-
-Verifique se o local do arquivo guide.xml está configurado corretamente. O local padrão é /etc/enigma2/.
-
--** Ative a opção para importar o guia automaticamente ou manualmente, conforme sua preferência.
+- No menu do dispositivo, acesse **Configurações > Plugins > EPG Importer**.
+- Dentro do EPG Importer:
+- Verifique se o local do arquivo `guide.xml` está configurado corretamente.
+- Ative a opção para importar o guia automaticamente ou manualmente.
 
 ### 3. Executando a Importação
-
--** Após configurar o arquivo, selecione a opção "Importar Agora" no EPG Importer.
-
--** O dispositivo processará o arquivo e atualizará o guia de programação dos canais.
+- Após configurar o arquivo, selecione a opção **"Importar Agora"** no EPG Importer.
+- O dispositivo processará o arquivo e atualizará o guia de programação dos canais.
 
 ### 4. Verificando a Programação
-
--** Após a importação, volte à interface principal do dispositivo.
-
--** -Navegue pelos canais para verificar se a programação está aparecendo corretamente.
+- Após a importação, volte à interface principal do dispositivo.
+- Navegue pelos canais para verificar se a programação está aparecendo corretamente.
 
 ### Dica:
 Certifique-se de que o arquivo `guide.xml` está atualizado e que os IDs dos canais no arquivo correspondem aos IDs no dispositivo.
@@ -57,22 +46,9 @@ Certifique-se de que o arquivo `guide.xml` está atualizado e que os IDs dos can
 ---
 
 ## Solução de Problemas
-
-A programação não aparece:
-
-Verifique se as IDs no guide.xml correspondem às do channels ids.xml do dispositivo.
-
-Certifique-se de que o arquivo guide.xml foi descompactado corretamente (se aplicável).
-
-Erro ao importar:
-
-Confirme que o arquivo foi colocado no diretório correto do dispositivo e que possui as permissões de leitura adequadas.
-
-Verifique se o arquivo guide.xml está bem formatado, sem erros de sintaxe XML.
-
-Consulte os logs do seu dispositivo Enigma2 para identificar erros específicos.
-
-EPG desatualizado: Certifique-se de baixar a versão mais recente do guide.xml.
+- **A programação não aparece:** Verifique se as IDs no `guide.xml` correspondem às do dispositivo.
+- **Erro ao importar:** Confirme que o arquivo foi colocado no diretório correto e que possui as permissões adequadas.
+- **EPG desatualizado:** Certifique-se de baixar a versão mais recente do `guide.xml`.
 
 
 ### 2. `channel id.xml`
@@ -138,6 +114,18 @@ Substitua a imagem abaixo pelo conteúdo real que mostra a interface ou um exemp
 Contribuições são bem-vindas! Para enviar melhorias ou relatar problemas, abra uma **issue** ou **pull request** no repositório.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
