@@ -1,7 +1,16 @@
+Aqui está um novo README.md com as sugestões incorporadas:
+
+---
 
 # EPG System - Guia de Programação
 
-Este projeto fornece guias de programação de canais para dispositivos compatíveis com o **Enigma2**. Ele inclui arquivos com informações sobre a programação e IDs dos canais, além de scripts para instalação de plugins.
+O **EPG System** é uma ferramenta essencial para dispositivos compatíveis com **Enigma2**, fornecendo guias de programação detalhados para os canais favoritos dos usuários. Este projeto inclui arquivos com informações sobre a programação e IDs dos canais, além de scripts para instalação de plugins, facilitando a configuração e atualização do EPG em seu dispositivo.
+
+---
+
+## Introdução
+
+O sistema EPG (Electronic Program Guide) é uma ferramenta essencial para dispositivos Enigma2, permitindo que você tenha acesso a guias de programação detalhados para seus canais favoritos. Este projeto oferece arquivos e scripts para facilitar a configuração e atualização do EPG em seu dispositivo.
 
 ---
 
@@ -16,23 +25,29 @@ Este projeto fornece guias de programação de canais para dispositivos compatí
 ## Arquivos Importantes
 
 ### 1. `guide.xml.gz`
-- Contém a programação completa dos canais. 
-- **É necessário descompactar este arquivo antes de usá-lo.** O arquivo descompactado será o `guide.xml` 
+- Contém a programação completa dos canais.  
 - As IDs no `guide.xml.gz` devem coincidir com as do `channels ids.xml`.
-  
+
+### 2. `channel id.xml`
+- Contém as IDs dos canais no formato correto.
+
+### 3. `channels ids.xml`
+- IDs dos canais utilizados para sincronização no `guide.xml.gz`.
+
+---
+
 ## Como usar o Guide.xml
 
 O arquivo `guide.xml` é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
 
 ### 1. Transferindo o Arquivo para o Dispositivo
--   No plugin Powerlame, escolha a opção "Baixar source para EPGimport".
--   O Powerlame irá baixar o arquivo guide.xml.gz e descompactá-lo no local correto para o EPG Importer.
+- No plugin Powerlame, escolha a opção **Baixar source para EPGimport**.
 
 ### 2. Configurando o EPG Importer
 - No menu do dispositivo, acesse **Configurações > Plugins > EPG Importer**.
 - Dentro do EPG Importer:
-- Verifique se o local do arquivo guide.xml está configurado corretamente. O local padrão é /etc/enigma2/.
-- Ative a opção para importar o guia automaticamente ou manualmente.
+  - Verifique se o local do arquivo `guide.xml` está configurado corretamente.
+  - Ative a opção para importar o guia automaticamente ou manualmente.
 
 ### 3. Executando a Importação
 - Após configurar o arquivo, selecione a opção **"Importar Agora"** no EPG Importer.
@@ -48,16 +63,10 @@ Certifique-se de que o arquivo `guide.xml` está atualizado e que os IDs dos can
 ---
 
 ## Solução de Problemas
-- **A programação não aparece:** Verifique se as IDs no `guide.xml` correspondem às do dispositivo.
-- **Erro ao importar:** Confirme que o arquivo foi colocado no diretório correto e que possui as permissões adequadas.
-- **EPG desatualizado:** Certifique-se de baixar a versão mais recente do `guide.xml`.
 
-
-### 2. `channel id.xml`
-- Contém as IDs dos canais no formato correto.
-
-### 3. `channels ids.xml`
-- IDs dos canais utilizados para sincronização no `guide.xml.gz`.
+- **A programação não aparece:** Verifique se as IDs no `guide.xml` correspondem às do dispositivo. Certifique-se também de que o arquivo foi importado corretamente.
+- **Erro ao importar:** Confirme que o arquivo foi colocado no diretório correto e que possui as permissões adequadas. Verifique também a conexão com a internet.
+- **EPG desatualizado:** Certifique-se de baixar a versão mais recente do `guide.xml`. Se o problema persistir, tente reimportar o arquivo.
 
 ---
 
@@ -73,12 +82,15 @@ Para usar este sistema, você precisa de:
 
 ## Instalando o Powerlame
 
-Para instalar o plugin **Powerlame** no seu dispositivo **Enigma2**, execute o comando abaixo no terminal:
+O plugin **Powerlame** é essencial para gerenciar e importar o EPG no seu dispositivo Enigma2. Para instalá-lo, siga os passos abaixo:
 
-```bash
-wget -qO- --no-check-certificate "https://raw.githubusercontent.com/systemof/EPG/master/powerlame.sh" | sed 's/
-//' | bash
-```
+1. Abra o terminal do seu dispositivo.
+2. Execute o comando abaixo para baixar e instalar o plugin:
+   ```bash
+   wget -qO- --no-check-certificate "https://raw.githubusercontent.com/systemof/EPG/master/powerlame.sh" | sed 's/
+   //' | bash
+   ```
+3. Após a instalação, o plugin estará disponível no menu de plugins do seu dispositivo.
 
 ### Explicação do Comando
 - `wget -qO-`: Baixa o script e exibe o conteúdo.
@@ -86,8 +98,12 @@ wget -qO- --no-check-certificate "https://raw.githubusercontent.com/systemof/EPG
 - `bash`: Executa o script diretamente.
 
 ---
-### Exemplo de Interface do Powerlame
+
+## Exemplo de Interface do Powerlame
+
 ![Exemplo de Powerlame](https://imgur.com/R2QGriA.png)
+
+---
 
 ## Exemplo de Arquivo `guide.xml`
 
@@ -111,11 +127,42 @@ Substitua a imagem abaixo pelo conteúdo real que mostra a interface ou um exemp
 
 ---
 
-## Contribuições
+## FAQ
 
-Contribuições são bem-vindas! Para enviar melhorias ou relatar problemas, abra uma **issue** ou **pull request** no repositório.
+**1. O que é o EPG?**
+O EPG (Electronic Program Guide) é um guia de programação que exibe informações sobre os programas de televisão, como horários, títulos e descrições.
+
+**2. Por que meu EPG não está atualizando?**
+Verifique se o arquivo `guide.xml` está no formato correto e se as IDs dos canais correspondem às do dispositivo.
+
+**3. Como posso instalar o plugin Powerlame?**
+Siga as instruções na seção [Instalando o Powerlame](#instalando-o-powerlame).
 
 ---
+
+## Contribuições
+
+Contribuições são bem-vindas! Se você deseja contribuir com melhorias ou relatar problemas, siga os passos abaixo:
+
+1. Abra uma **issue** para discutir as mudanças propostas.
+2. Faça um **fork** do repositório e implemente as mudanças.
+3. Envie um **pull request** com suas alterações.
+
+Certifique-se de seguir as diretrizes de estilo e padrões de codificação do projeto.
+
+---
+
+[![Build Status](https://img.shields.io/travis/systemof/EPG.svg)](https://travis-ci.org/systemof/EPG)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+---
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
 
 
 
