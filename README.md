@@ -16,7 +16,8 @@ Este projeto fornece guias de programação de canais para dispositivos compatí
 ## Arquivos Importantes
 
 ### 1. `guide.xml.gz`
-- Contém a programação completa dos canais.  
+- Contém a programação completa dos canais. 
+- **É necessário descompactar este arquivo antes de usá-lo.** O arquivo descompactado será o `guide.xml` 
 - As IDs no `guide.xml.gz` devem coincidir com as do `channels ids.xml`.
   
 ## Como usar o Guide.xml
@@ -24,12 +25,13 @@ Este projeto fornece guias de programação de canais para dispositivos compatí
 O arquivo `guide.xml` é responsável por fornecer a programação dos canais para o seu dispositivo Enigma2. Siga as etapas abaixo para configurá-lo corretamente:
 
 ### 1. Transferindo o Arquivo para o Dispositivo
-- No plugin Powerlame escolha a opção Baixar source para EPGimport
+-   No plugin Powerlame, escolha a opção "Baixar source para EPGimport".
+-   O Powerlame irá baixar o arquivo guide.xml.gz e descompactá-lo no local correto para o EPG Importer.
 
 ### 2. Configurando o EPG Importer
 - No menu do dispositivo, acesse **Configurações > Plugins > EPG Importer**.
 - Dentro do EPG Importer:
-- Verifique se o local do arquivo `guide.xml` está configurado corretamente.
+- Verifique se o local do arquivo guide.xml está configurado corretamente. O local padrão é /etc/enigma2/.
 - Ative a opção para importar o guia automaticamente ou manualmente.
 
 ### 3. Executando a Importação
@@ -114,6 +116,18 @@ Substitua a imagem abaixo pelo conteúdo real que mostra a interface ou um exemp
 Contribuições são bem-vindas! Para enviar melhorias ou relatar problemas, abra uma **issue** ou **pull request** no repositório.
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
